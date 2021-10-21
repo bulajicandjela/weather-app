@@ -22,15 +22,19 @@ const CitiesContainer: React.FC = () => {
             setErrorMessage('');
             }
             else setErrorMessage('City already found!');
+            setCityName('');
             }
             else if(data.code==='404'){
                 setErrorMessage('City not found!');
+                setCityName('');
             }
             else if(data.code==='400'){
                 setErrorMessage('You must enter a city!');
+                setCityName('');
             }
             else {
                 setErrorMessage('Unknown mistake.');
+                setCityName('');
             }
         })
     }
