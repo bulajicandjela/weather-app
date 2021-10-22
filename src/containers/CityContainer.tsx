@@ -14,7 +14,7 @@ const CitiesContainer: React.FC = () => {
       if (data.code === 200) {
         const exist = checkCityExist(data.name);
         console.log(exist);
-        if (exist !== true) {
+        if (!exist) {
           setCities([...cities, data]);
           setCityChoosen(true);
           setCityName("");
@@ -39,18 +39,14 @@ const CitiesContainer: React.FC = () => {
   };
 
   const handleDeleteCity = (name: string) => {
-    for (var i = 0; i < cities.length; i++) {
-      if (cities[i].name.localeCompare(name) === 0) {
-        cities.splice(i, 1);
-        i--;
-        setCities([...cities]);
-      }
-    }
-    console.log(cities);
+    let filtered = cities.filter(function(item){
+      return item.name !== name;
+    })
+    setCities([...filtered]);
   };
 
   const checkCityExist = (name: string) => {
-    for (var i = 0; i < cities.length; i++) {
+    for (let i = 0; i < cities.length; i++) {
       if (cities[i].name.localeCompare(name) === 0) {
         return true;
       }

@@ -20,7 +20,6 @@ export const GlobalStyle = createGlobalStyle`
     export const Wrapper = styled.div`
         display: flex;
         flex-direction: row;
-        //flex-basis: 25%;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;

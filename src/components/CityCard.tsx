@@ -33,7 +33,6 @@ export const CityCard = (props: City) => {
         <Humidity>Humidity:{props.humidity}%</Humidity>
         <Wind>Wind:{props.wind}km/h</Wind>
       </Container>
-      {/* {props.name} {month} {day} {props.temp}°C {props.main} Humidity:{props.humidity}% Wind:{props.wind}km/h */}
     </CardWrapper>
   );
 };

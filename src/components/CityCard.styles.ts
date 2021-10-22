@@ -23,13 +23,11 @@ export const Container = styled.div`
 
 export const CityName = styled.div`
   font-weight: bold;
-  float: left;
   font-family: "Merriweather", cursive;
   font-size: 20px;
 `;
 
 export const DateField = styled.div`
-  float: right;
   font-family: "Merriweather", cursive;
   font-size: 15px;
 `;
@@ -37,26 +35,22 @@ export const DateField = styled.div`
 export const Temp = styled.div`
   font-weight: bold;
   margin: 0px 10px;
-  float: right;
   font-family: "Merriweather", cursive;
   font-size: 20px;
 `;
 
 export const Main = styled.div`
-  float: right;
   margin: 0px 10px;
   font-family: "Merriweather", cursive;
   font-size: 15px;
 `;
 
 export const Humidity = styled.div`
-  float: right;
   font-family: "Merriweather", cursive;
   font-size: 15px;
 `;
 
 export const Wind = styled.div`
-  float: right;
   font-family: "Merriweather", cursive;
   font-size: 15px;
 `;

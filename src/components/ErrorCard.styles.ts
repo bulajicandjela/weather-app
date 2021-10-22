@@ -12,7 +12,6 @@ export const ErrorCardStyle = styled.div`
   padding: 0px 10px;
   text-align: center;
   color: #4c5b67;
-  float: left;
   font-family: "Lato", sans-serif;
   color: red;
   font-weight: bold;
