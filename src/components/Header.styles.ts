@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -6,7 +6,7 @@ export const Container = styled.div`
   //padding-left:40%;
   align-items: center;
   height: 70px;
-  color: #F1F1F1;
+  color: #f1f1f1;
   background-color: #738fa5;
-  font-family: 'Merriweather';
+  font-family: "Merriweather";
 `;
