@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CardWrapper = styled.div`
   flex: 1 0 21%;
   flex-grow: 1;
+  height: 100px;
   max-width: calc(100% * (1 / 4) - 3.5%);
   display: flex;
   flex-direction: row;

@@ -20,9 +20,7 @@ const SearchBar: React.FC<Props> = ({
   handleDeleteCity,
 }) => {
   return (
-    <>
       <SearchBarStyle>
-        <div>
           {cityChosen
             ? cities.map((city, index) => {
                 return (
@@ -36,7 +34,6 @@ const SearchBar: React.FC<Props> = ({
           <SearchbarInputStyle
             key="random1"
             value={cityName}
-            //placeholder={"search city"}
             onChange={(e) => handleInputChange(e.target.value)}
             onKeyPress={(event) => {
               if (event.key === "Enter" || event.key === ",") {
@@ -44,9 +41,7 @@ const SearchBar: React.FC<Props> = ({
               }
             }}
           />
-        </div>
       </SearchBarStyle>
-    </>
   );
 };
 export default SearchBar;

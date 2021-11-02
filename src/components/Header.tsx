@@ -23,7 +23,6 @@ const Header: React.FC<Props> = ({
   errorMessage,
 }) => {
   return (
-    <>
       <Container>
         <SearchBar
           cityName={cityName}
@@ -33,11 +32,10 @@ const Header: React.FC<Props> = ({
           cities={cities}
           handleDeleteCity={handleDeleteCity}
         ></SearchBar>
-        {errorMessage !== "" ? (
+        {errorMessage ? (
           <ErrorCard errorMessage={errorMessage}></ErrorCard>
         ) : null}
       </Container>
-    </>
   );
 };
 
