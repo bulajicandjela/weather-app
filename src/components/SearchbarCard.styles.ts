@@ -10,7 +10,6 @@ export const SearchCardWrapper = styled.button`
   padding: 5px;
   text-align: center;
   color: #4c5b67;
-  float: left;
   font-family: "Roboto", sans-serif;
   color: white;
   &:hover {
