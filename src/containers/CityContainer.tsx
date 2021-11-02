@@ -39,17 +39,27 @@ const CitiesContainer: React.FC = () => {
   };
 
   const handleDeleteCity = (name: string) => {
-    let filtered = cities.filter(function(item){
+    let filtered = cities.filter(function (item) {
       return item.name !== name;
-    })
+    });
     setCities([...filtered]);
   };
 
+  // const checkCityExist = (name: string) => {
+  //   for (let i = 0; i < cities.length; i++) {
+  //     if (cities[i].name.localeCompare(name) === 0) {
+  //       return true;
+  //     }
+  //     return false; //pogledaj sum
+  //   }
+  // };
+
   const checkCityExist = (name: string) => {
-    for (let i = 0; i < cities.length; i++) {
-      if (cities[i].name.localeCompare(name) === 0) {
-        return true;
-      }
+    let found = cities.find((item) => item.name === name);
+    if (found) {
+      return true;
+    } else {
+      return false;
     }
   };
 

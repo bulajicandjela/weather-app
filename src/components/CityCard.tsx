@@ -1,4 +1,5 @@
-import React from "react";
+//import {useEffect, useState} from "react";
+import dateFormat from "dateformat";
 import {
   CardWrapper,
   CityName,
@@ -12,17 +13,35 @@ import {
 import { City } from "./Weather.types";
 
 export const CityCard = (props: City) => {
-  let newDate = new Date(props.date * 1000);
-  let month = newDate.toLocaleString("default", { month: "long" });
-  let day = newDate.getDate();
+  const newDate = new Date(props.date * 1000);
+  //let month = newDate.toLocaleString("default", { month: "long" });
+  //const day = newDate.getDate();
+  
+  // const [sufix, setSufix] = useState('');
+
+  // useEffect(() => {
+  //   switch(day){
+  //     case 1: case 21: case 31:
+  //     setSufix('st');
+  //     break;
+  //     case 2: case 22:
+  //     setSufix('nd');
+  //     break;
+  //     case 3: case 23: 
+  //     setSufix('rd');
+  //     break;
+  //     default:
+  //     setSufix('th');
+  //     break;
+  //   }
+  //   });
 
   return (
     <CardWrapper>
       <Container>
         <CityName> {props.name}</CityName>
         <DateField>
-          {" "}
-          {month} {day}th{" "}
+          {dateFormat(newDate, "mmmm dS")} 
         </DateField>
       </Container>
       <Container>
@@ -36,3 +55,5 @@ export const CityCard = (props: City) => {
     </CardWrapper>
   );
 };
+
+
